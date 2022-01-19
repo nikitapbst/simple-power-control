@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(${PROJECT_NAME} spower-control.cpp)
 
 install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_BINDIR})
-install(FILES ${SERVICE_FILES} DESTINATION /lib/systemd/system/)
+install(FILES xyz.openbmc_project.Chassis.Control.Power@.service DESTINATION /lib/systemd/system/)
