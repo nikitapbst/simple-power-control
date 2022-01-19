@@ -1,0 +1,12 @@
+[Unit]
+Description=Intel Power Control for the Host %i
+
+[Service]
+Restart=always
+RestartSec=3
+ExecStart=/usr/bin/spower-control %i
+Type=dbus
+BusName=xyz.openbmc_project.State.Host%i
+
+[Install]
+WantedBy=sysinit.target
