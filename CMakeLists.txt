@@ -16,4 +16,4 @@ target_link_libraries(${PROJECT_NAME} systemd)
 target_link_libraries(${PROJECT_NAME} sdbusplus)
 
 install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_BINDIR})
-install(FILES ${SERVICE_FILES} DESTINATION /lib/systemd/system/)
+install(FILES xyz.openbmc_project.Chassis.Control.Power@.service DESTINATION /lib/systemd/system/)
